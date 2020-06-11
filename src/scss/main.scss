@@ -6,8 +6,44 @@
 body {
   background: $wtf;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
+  
 }
+
+.main{
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 200px 1fr;
+  min-height:100vh;
+  &__header{
+    grid-column:3/8;
+    display:flex;
+    align-items:flex-end;
+    
+  }
+}
+
+.editor{
+  grid-column:3/9;
+  &__textarea{
+    width:100%;
+    min-height:128px;
+    margin-bottom:24px;
+    border-radius:8px;
+    padding:8px;
+  }
+  &__save-button{
+    border-radius:8px;
+
+  }
+  &__load-button{
+    border-radius:8px;
+  }
+}
+
+.button-wrapper{
+
+display:flex;
+justify-content: space-around;
+}
+
